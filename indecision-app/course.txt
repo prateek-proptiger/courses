@@ -1,0 +1,47 @@
+Important
+---------
+How React uses key on arrays ?
+Lifecycle Methods
+Browser storage options - localStorage, sessionStorage, indexDB
+How to check if NaN - Because undefined also gives true with isNaN ?
+How does browser cache works ?
+wget, curl
+Setup an nginx server which detects ur country and city
+normalize.css is essential to reset the default css every browser has of its own
+How does webpack creates dependency tree ?
+Advantages of scss - Variables, Mixins
+Difference between Yarn and NPM ?
+
+Why no to global dependencies ?
+-------------------------------
+1. Not updated in package.json
+2. Different versions required for different projects.
+
+Named / Default Exports
+------------------------
+export { subtract as default, add, square }
+export default subtract;
+import subtract, { add, square }
+Any file can setup a number of named exports but a single named export
+
+React
+-----
+Default name for anonymous react component - Unknown
+
+Webpack
+-------
+Webpack - Asset Bundler
+Because client side code is increasing - Reduce handshake overhead
+No polluting of global namespace
+Node Script - Accepts config
+Every file is a module
+Loaders - Process a file before adding them to bundle
+babel-cli - Helps in running commands from CLI whereas babel-core from tools like Webpack
+babel-loader - Webpack plugin for babel
+source-map to debug errors inside bundles
+devServer does supply bundle.js but never rides it and loads from memory itself
+Able to define state = {} at class level using transform-class-properties plugin of babel
+css-loader - Converts css into js representation
+style-loader - Injects css into DOM with style tag
+sass-loader - Compiles sass to css - Uses node-sass behind the scenes
+@import './partials/base'; import 'normalize.css/normalize.css';

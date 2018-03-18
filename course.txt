@@ -1,0 +1,6 @@
+Git
+---
+Untracked => (Unstaged => Staged) => Commits
+Untracked - (New files)
+Unstaged - Changes to file managed by Git
+Staged - Stage file for git to track changes

@@ -1,0 +1,13 @@
+https://www.lullabot.com/articles/what-is-an-isomorphic-application
+
+Isomorphic app
+Universal router
+CSS components
+
+Isomorphic - An app whose code can run on both client and server.
+Need to understand the basics of first request coming to server whereas the later ones being processed at the client itself.
+1. Debugging is trickier
+2. Bye bye jQuery = Because there is no DOM on server
+3. Taking into account where the code would run
+4. Avoid exposing sensitive data
+5. Managing settings

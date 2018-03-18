@@ -1,0 +1,36 @@
+https://blog.arkency.com/2014/10/react-dot-js-and-dynamic-children-why-the-keys-are-important/
+https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318
+https://reactjs.org/docs/reconciliation.html#recursing-on-children
+http://output.jsbin.com/wohima
+
+universal router
+css components
+
+Keys help React identify which items have been changed, added or removed.
+React doesn't recommend indexes for keys as it can negatively affect performance.
+Keys make sense in the context of surrounding array only.
+Keys must be unique among siblings and may not be globally.
+Keys don't get passed to components.
+
+render() creates a tree of elements to render.
+On update it has to figure out how to efficiently update the UI to match the most recent tree.
+There are some generic state of the art algorithms to convert one tree into another but they have a complexity of n^3.
+But this is way to expensive and React implements heuristic algorithm O(n) with some assumptions.
+1. Two elements of different types will produce different trees.
+2. The developer can hint at which child elements may be stable across different renders with a key prop.
+
+Diffing algorithm
+Elements of different types
+DOM elements of same type
+Component elements of same type
+Recursion on children
+
+Why VDOM?
+Because DOM update is inefficient.
+Web rendering workflow ?
+Batch changes to efficiency
+React elements are cheap, compared, changes identified, patched, applied to DOM
+
+React Fiber = Change of React's reconciliation algorithm
+Incremental rendering ?
+

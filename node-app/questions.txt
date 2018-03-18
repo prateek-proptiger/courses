@@ -1,0 +1,6 @@
+Q1: Critical Section Rendering
+Q2: Node Event Loop
+Q3: Underscore library implementation
+Q4: Difference between Promise and Callback.
+Q5: How does HTTP request work ?
+Q6: Memory management

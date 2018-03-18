@@ -1,0 +1,9 @@
+clean:
+Cleans build folder and creates an empty folder public/ in it.
+
+copy:
+copies the content of src/public to build/public/frontendo2o.
+
+bundle:
+
+clientConfig - Read

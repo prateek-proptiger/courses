@@ -1,0 +1,24 @@
+Important:
+https://kleopetrov.me/2016/03/18/everything-about-babel/
+err.stack
+process.exit()
+/dev/null while ssh
+browserconfig.xml
+crossdomain.xml
+https://github.com/webpack/docs/wiki/optimization
+
+Questions:
+
+1. Difference between babel and babel-node.
+Babel (transpiler) is used to compile js files to the version supported bu current browsers. babel-cli is used to access babel features on cli.
+It comes with a second CLI (babel-node) as well which works exactly similar to Node.js's CLI only it will compile ES6 code using defined presets/plugins before running it.
+Not meant for use on production as it is unnecessarily heavy with high memory usage due to the cache being stored in memory.
+Source: https://babeljs.io/docs/usage/cli/
+
+2. process.exit() and process.exitCode
+- The process.exit() method instructs Node.js to terminate the process synchronously with an exit status of code.
+- A number which will be the process exit code, when the process either exits gracefully, or is exited via process.exit() without specifying a code. 0 - 'success' and 1 - 'failure'.
+
+3. del
+A module used to delete files and folders using globs. It is similar to 'rimraf' but with a promise API and support for multiple files.
+Source: https://www.npmjs.com/package/del

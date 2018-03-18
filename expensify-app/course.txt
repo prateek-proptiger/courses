@@ -1,0 +1,64 @@
+Important
+---------
+How does Provider, connect work ?
+event.persist();
+Difference between Jest and Enzyme ?
+What is Snapshot testing ?
+
+React-Router
+------------
+react-router-dom = React Router library is divided specific to clients
+BrowserRouter = HOC for Routes
+Route - path, component, exact = Based on url different components are rendered. Matching of url can be specified to be exact
+historyApiFallback = By default all the requests go to server. This falls lets application know to look for client side routing
+Switch = Tells router to stop as soon as finds matching url
+Link - to = Link to a url
+NavLink - to, activeClassName, exact
+Header = Common component to be used across application
+props - history, location, match = Data related to current url
+Dynamic url = edit/23?q=abc#contactus
+
+Redux
+-----
+State Management Library
+Centralised Store
+const store = createStore(reducer(prevState, action) { return newState })
+store.getState() = Get current state
+store.dispatch(action) = Update current state
+const unsubscribe = store.subscribe(() => { console.log(store.getState()) })
+unsubscribe() = Subscribe to changes in state
+Action generators = Functions which return action objects
+Reducers are pure function:
+    1. Output completely depends upon input.
+    2. Never change inputs.
+For complex state, it is difficult to manager under single reducer.
+Hence they are broken into smaller ones for each property and use combineReducers.
+
+React-Redux
+-----------
+Connected components
+Very small library basically - Provider, connect
+Provider = Provides access of store to entire application
+=> This works fine as supply extracted value to callback
+onDescriptionChange = (e) => {
+    const description = e.target.value;
+    this.setState( () => { description })
+}
+=> This fails as event is accessed in callback whereas synthetic event is nullified due to performance reasons. Use e.persist() to avoid error.
+onNoteChange = (e) => {
+    // e.persist();
+    this.setState( () => { note: e.target.value })
+}
+
+Testing Frameworks
+------------------
+Jest, Jasmine, Chai, Mocha
+Jest is best suited with React
+yarn test -- --watch
+test() = To define any test case
+expect() = Part of assertion library
+.toBe() doesn't work with objects rather use .toEqual() which checks for all props
+.any() checks for type of value
+Shallow renderer
+Snapshot testing - Takes a snapshot for the first time and compares in further builds.
+Snapshot updated using 'u' key.
